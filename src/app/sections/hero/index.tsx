@@ -7,6 +7,7 @@ import Link from "next/link";
 import { LogoBasement } from "../../logos/logo";
 import { CanvasWithMacModel } from "./mac-model";
 import { toVw } from "~/lib/utils";
+import { BASE_PATH } from "~/lib/constants";
 import { useMedia } from "~/hooks/use-media";
 
 export const Hero = () => {
@@ -56,7 +57,7 @@ export const Hero = () => {
               }}
             >
               <image
-                href="/chicago-logo.png"
+                href={`${BASE_PATH}/chicago-logo.png`}
                 x="281"
                 y="0"
                 width="120"
@@ -148,7 +149,7 @@ export const Hero = () => {
                         fromTo: [
                           {
                             attr: {
-                              width: toVw(143, 1920, 143),
+                              width: toVw(143, 1920),
                             },
                           },
                           {
@@ -176,7 +177,7 @@ export const Hero = () => {
                         fromTo: [
                           {
                             attr: {
-                              width: toVw(143, 1920, 143),
+                              width: toVw(143, 1920),
                             },
                           },
                           {
@@ -205,7 +206,7 @@ export const Hero = () => {
                           fromTo: [
                             {
                               attr: {
-                                width: toVw(143, 1920, 143),
+                                width: toVw(143, 1920),
                               },
                             },
                             {
@@ -222,7 +223,7 @@ export const Hero = () => {
                           end: 100,
                           to: {
                             attr: {
-                              width: toVw(1440, 1920, 1440),
+                              width: toVw(1440, 1920),
                             },
                           },
                         },

@@ -8,6 +8,7 @@ import { GLTF } from "three-stdlib";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import { useScrollytelling } from "~/lib/scrollytelling-client";
+import { BASE_PATH } from "~/lib/constants";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -20,12 +21,12 @@ type GLTFResult = GLTF & {
   };
 };
 
-useGLTF.preload("/models/Mac128k-light.glb");
+useGLTF.preload(`${BASE_PATH}/models/Mac128k-light.glb`);
 
 const MacModel = () => {
   const { timeline } = useScrollytelling();
   const { nodes, materials } = useGLTF(
-    "/models/Mac128k-light.glb"
+    `${BASE_PATH}/models/Mac128k-light.glb`
   ) as GLTFResult;
   const innerRef = useRef<THREE.Group>(null);
   const width = useThree((state) => state.viewport.width);

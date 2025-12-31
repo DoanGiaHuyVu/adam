@@ -3,6 +3,8 @@ import * as Scrollytelling from "~/lib/scrollytelling-client";
 
 import s from "./intro.module.scss";
 
+import { BASE_PATH } from "~/lib/constants";
+
 export const LabIntro = () => {
   return (
     <Scrollytelling.Root
@@ -20,7 +22,7 @@ export const LabIntro = () => {
           }}
         >
           <img
-            src="/images/stickers/21.png"
+            src={`${BASE_PATH}/images/stickers/21.png`}
             alt="background sticker"
             className={s.backgroundSvg}
           />

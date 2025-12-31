@@ -2,7 +2,7 @@ import "./css/global.scss";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { JetBrains_Mono, Outfit } from "next/font/google";
-import { siteOrigin } from "~/lib/constants";
+import { siteOrigin, BASE_PATH } from "~/lib/constants";
 import { Analytics } from "@vercel/analytics/react";
 
 const jetBrainsMono = JetBrains_Mono({
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
-  manifest: "/manifest.webmanifest",
+  manifest: `${BASE_PATH}/manifest.webmanifest`,
   twitter: {
     card: "summary_large_image",
     creator: "@adamvu",
