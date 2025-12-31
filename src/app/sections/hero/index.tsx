@@ -121,7 +121,9 @@ export const Hero = () => {
                       },
                       {
                         attr: {
-                          viewBox: "0 0 1856 183",
+                          viewBox: isMobileSize
+                            ? "0 0 543 183"
+                            : "0 0 1856 183",
                         },
                         width: isMobileSize ? "100%" : toVw(1856),
                       },
