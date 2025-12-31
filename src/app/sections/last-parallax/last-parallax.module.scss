@@ -1,0 +1,126 @@
+@import "../../css/helpers";
+
+.section {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width: 800px) {
+    margin-top: -34vh;
+  }
+
+  h2 {
+    font-size: tovw(102px, "desktop-large", 40px);
+    font-weight: 800;
+    text-align: center;
+    line-height: 1;
+    position: relative;
+    z-index: 5;
+  }
+
+  :global(.wrapper) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    will-change: transform;
+  }
+
+  .title {
+    color: #4285f4;
+    font-family: var(--font-outfit);
+    // mix-blend-mode: overlay;
+  }
+
+  // Base sticker style for common properties if needed
+  [class*="sticker-"] {
+    position: absolute;
+    z-index: 1;
+    width: tovw(250px); // Default size
+    height: auto;
+  }
+
+  .sticker-9 {
+    width: tovw(300px);
+    top: 20%;
+    left: 20%;
+    transform: rotate(-15deg);
+  }
+
+  .sticker-10 {
+    width: tovw(270px);
+    top: 15%;
+    right: 25%;
+    transform: rotate(10deg);
+  }
+
+
+
+  .sticker-11 {
+    width: tovw(330px);
+    bottom: 20%;
+    left: 15%;
+    transform: rotate(5deg);
+  }
+
+  .sticker-12 {
+    width: tovw(240px);
+    bottom: 50%;
+    right: 20%;
+    transform: rotate(-10deg);
+  }
+
+  .sticker-13 {
+    width: tovw(285px);
+    top: 36%;
+    left: 5%;
+    transform: rotate(-20deg);
+  }
+
+  .sticker-14 {
+    width: tovw(255px);
+    top: 45%;
+    right: 10%;
+    transform: rotate(15deg);
+  }
+
+  .sticker-15 {
+    width: tovw(210px);
+    top: 65%;
+    left: 40%;
+    transform: rotate(-5deg);
+  }
+
+  .sticker-20 {
+    width: tovw(250px);
+    bottom: 55%;
+    right: 30%;
+    transform: rotate(20deg); // Adding slight rotation for style consistency
+  }
+
+  .sticker-18 {
+    width: tovw(250px);
+    top: 35%;
+    left: 20%;
+    transform: rotate(-10deg);
+  }
+
+  .sticker-19 {
+    width: tovw(350px);
+    top: 55%;
+    left: 45%;
+    transform: rotate(15deg);
+  }
+
+  @media screen and (max-width: 800px) {
+    [class*="sticker-"] {
+      width: tovw(100px); // Smaller on mobile
+    }
+  }
+}

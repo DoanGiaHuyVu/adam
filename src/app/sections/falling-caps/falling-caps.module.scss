@@ -1,0 +1,156 @@
+@import "../../css/helpers";
+
+.spacer {
+  position: relative;
+  height: 1000vh;
+  background-color: white;
+}
+
+.pin {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+
+  .canvas-container {
+    --offset-y: 40%;
+
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: calc(100% + var(--offset-y));
+    transform: translateY(-50%);
+    overflow: hidden;
+  }
+
+  .paragraph {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: tovw(100px, "desktop", 20px);
+    font-weight: 900;
+    max-width: max-content;
+    margin: 0 auto;
+    text-transform: capitalize;
+    line-height: calc(86 / 72);
+    color: #4285F4; // Google Blue
+
+    @media screen and (max-width: 800px) {
+      font-size: tovw(17px, "mobile");
+    }
+
+    .highlight {
+      color: #FBBC05; // Google Yellow
+    }
+  }
+
+  .sticker {
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .sticker-1 {
+    width: 220px;
+    height: auto;
+    top: 5%;
+    right: 25%;
+    transform: rotate(15deg);
+
+    @media screen and (max-width: 800px) {
+      width: 130px;
+      top: 2%;
+      right: 15%;
+    }
+  }
+
+  .sticker-2 {
+    width: 220px;
+    top: 2%;
+    left: 15%;
+    transform: rotate(-20deg);
+
+    @media screen and (max-width: 800px) {
+      width: 110px;
+      left: 5%;
+    }
+  }
+
+  .sticker-3 {
+    width: 160px;
+    top: 28%;
+    right: 15%;
+    transform: rotate(25deg);
+
+    @media screen and (max-width: 800px) {
+      width: 95px;
+      right: 5%;
+    }
+  }
+
+  .sticker-4 {
+    width: 300px;
+    bottom: 12%;
+    right: 30%;
+    transform: rotate(-8deg);
+
+    @media screen and (max-width: 800px) {
+      width: 150px;
+      right: 20%;
+    }
+  }
+
+  .sticker-5 {
+    width: 200px;
+    height: auto;
+    bottom: 25%;
+    left: 15%;
+    transform: rotate(-10deg);
+
+    @media screen and (max-width: 800px) {
+      width: 120px;
+      bottom: 20%;
+      left: 10%;
+    }
+  }
+
+  .sticker-6 {
+    width: 170px;
+    top: 35%;
+    left: 10%;
+    transform: rotate(18deg);
+
+    @media screen and (max-width: 800px) {
+      width: 100px;
+      left: 5%;
+    }
+  }
+
+  .sticker-7 {
+    width: 190px;
+    bottom: 35%;
+    right: 10%;
+    transform: rotate(-15deg);
+
+    @media screen and (max-width: 800px) {
+      width: 115px;
+      right: 5%;
+    }
+  }
+
+  .sticker-8 {
+    width: 210px;
+    bottom: 5%;
+    left: 25%;
+    transform: rotate(12deg);
+
+    @media screen and (max-width: 800px) {
+      width: 125px;
+      left: 15%;
+    }
+  }
+}

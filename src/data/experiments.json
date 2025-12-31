@@ -1,0 +1,57 @@
+[
+  {
+    "title": "RBC Borealis LsI Project",
+    "href": "https://github.com/pheaktralean/ConcordIA",
+    "og": "/images/projects/concordIA_project.png",
+    "contributors": [
+      {
+        "url": "https://github.com/adamvu",
+        "name": "team ConcordIA"
+      }
+    ]
+  },
+  {
+    "title": "GAN Project",
+    "href": "https://colab.research.google.com/drive/1Ipz0q4oZdCsbQ720cdy7SiOZd17QoxOp?usp=sharing",
+    "og": "/images/projects/gan_project.png",
+    "contributors": [
+      {
+        "url": "https://github.com/adamvu",
+        "name": "Adam Vu"
+      }
+    ]
+  },
+  {
+    "title": "Amicae",
+    "href": "https://github.com/phmarcel0x/amicae.git",
+    "og": "/images/projects/project_amicae.png",
+    "contributors": [
+      {
+        "url": "https://github.com/adamvu",
+        "name": "team Amicae"
+      }
+    ]
+  },
+  {
+    "title": "SNKRS Project",
+    "href": "https://github.com/DoanGiaHuyVu/SNKRS_e_commerce_website",
+    "og": "/images/projects/snkrs_project.png",
+    "contributors": [
+      {
+        "url": "https://github.com/adamvu",
+        "name": "Adam Vu"
+      }
+    ]
+  },
+  {
+    "title": "Research Project",
+    "href": "",
+    "og": "/images/projects/summer_intern_project.png",
+    "contributors": [
+      {
+        "url": "https://github.com/adamvu",
+        "name": "Adam Vu (supervised by Van-Khanh Tran, Ph.D)"
+      }
+    ]
+  }
+]

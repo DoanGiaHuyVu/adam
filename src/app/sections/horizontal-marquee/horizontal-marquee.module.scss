@@ -1,0 +1,59 @@
+@import "../../css/helpers";
+
+.section {
+  height: 800vh;
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  color: black;
+  transition: background-color 0.35s ease-out, color 0.35s ease-out;
+}
+
+.pinned {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+
+  --svg-width: #{tovw(674px)};
+
+  --right: calc(50vw - var(--svg-width) / 2);
+}
+
+.animated {
+  height: 100vh;
+  position: absolute;
+  right: var(--right);
+
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  white-space: nowrap;
+  font-family: var(--font-outfit);
+  font-weight: 900;
+  font-size: tovw(500px);
+  color: #FBBC05;
+  transition: color 0.35s ease-out;
+
+  cursor: default;
+  user-select: none;
+}
+
+// .worldSvg {
+//   width: var(--svg-width);
+//   height: tovw(467px);
+//   margin-left: tovw(80px);
+// }
+
+.worldSvg {
+  width: var(--svg-width);
+  height: auto;           // <-- important: keep aspect ratio
+  max-height: 200vh;       // <-- prevents it from taking over the screen
+  margin-left: tovw(80px);
+
+  display: block;         // <-- fixes weird baseline/inline positioning
+  object-fit: contain;
+  flex: 0 0 auto;
+}
