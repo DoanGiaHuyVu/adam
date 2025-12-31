@@ -4,30 +4,11 @@ const withBundleAnalyzer = require("@next/bundle-analyzer");
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
+  output: "export",
   // experimental: { appDir: true },
   images: {
+    unoptimized: true,
     domains: ["lab.basement.studio"],
-  },
-  rewrites: async () => {
-    const rules = [
-      {
-        source: "/:path*",
-        destination: `/:path*`,
-      },
-    ];
-    if (process.env.NEXT_PUBLIC_DOCS_URL) {
-      rules.push(
-        {
-          source: "/docs",
-          destination: `${process.env.NEXT_PUBLIC_DOCS_URL}/docs`,
-        },
-        {
-          source: "/docs/:path*",
-          destination: `${process.env.NEXT_PUBLIC_DOCS_URL}/docs/:path*`,
-        }
-      );
-    }
-    return rules;
   },
 };
 

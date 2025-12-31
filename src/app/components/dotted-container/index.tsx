@@ -9,7 +9,7 @@ import s from './dotted-container.module.scss';
 
 export const DottedDiv = React.forwardRef<
 	HTMLDivElement,
-	{ children?: React.ReactNode } & JSX.IntrinsicElements['div']
+	React.ComponentProps<'div'>
 >(({ children, className, ...rest }, ref) => {
 	const { elementRef } = useMouseTracker({
 		onChange: ({ x, y, isHovering, first }) => {

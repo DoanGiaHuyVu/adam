@@ -147,7 +147,7 @@ const PreFooter = () => {
           target="_blank"
           rel="noreferrer"
         >
-          Let's stay connected!
+          Let&apos;s stay connected!
         </a>
         <a
           className={s["mobile-qr-link"]}

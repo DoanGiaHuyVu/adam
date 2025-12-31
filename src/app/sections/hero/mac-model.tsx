@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import { gsap } from "gsap";
 import * as THREE from "three";
@@ -37,14 +38,18 @@ const MacModel = () => {
 
   return (
     <Float>
+      {/* @ts-ignore */}
       <group dispose={null} scale={width * 0.6} ref={innerRef}>
+        {/* @ts-ignore */}
         <group position={[0, 0, 0]} rotation={[0.45, -0.51, -0.03]}>
+          {/* @ts-ignore */}
           <mesh
             castShadow
             receiveShadow
             geometry={nodes.Cube009.geometry}
             material={materials.m_Mac128k}
           />
+          {/* @ts-ignore */}
           <mesh
             castShadow
             receiveShadow

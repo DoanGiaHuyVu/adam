@@ -142,7 +142,7 @@ export const LastParallax = () => {
           >
             <h2 className={s["title"]}>
               THANK YOU, <br />
-              Y'ALL
+              Y&apos;ALL
             </h2>
           </Scrollytelling.Animation>
         </div>
