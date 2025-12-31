@@ -140,10 +140,6 @@
 
   div:nth-child(3) {
     height: tovw(115px);
-    @media screen and (max-width: 800px) {
-        height: auto;
-        min-height: tovw(60px, "mobile");
-    }
   }
 }
 
@@ -153,11 +149,6 @@
   align-items: flex-start;
   width: 100%;
   height: tovw(183px);
-
-  @media screen and (max-width: 800px) {
-    height: auto;
-    aspect-ratio: 543/183;
-  }
 
   svg {
     position: absolute;
@@ -209,11 +200,6 @@
     position: relative;
     width: tovw(415px);
     height: tovw(115px);
-
-    @media screen and (max-width: 800px) {
-      width: tovw(200px, "mobile");
-      height: tovw(55px, "mobile");
-    }
     margin-right: tovw(70px);
     transform-origin: left center;
 
@@ -265,10 +251,6 @@
   width: auto;
   height: tovw(116px);
   position: relative !important;
-
-  @media screen and (max-width: 800px) {
-    height: tovw(60px, "mobile");
-  }
 }
 
 .footer {
