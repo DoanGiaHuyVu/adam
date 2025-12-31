@@ -149,14 +149,12 @@ export const Hero = () => {
                         fromTo: [
                           {
                             attr: {
-                              width: toVw(143, 1920),
+                              width: 143,
                             },
                           },
                           {
                             attr: {
-                              width: isMobileSize
-                                ? toVw(400, 800)
-                                : toVw(300, 1920),
+                              width: isMobileSize ? 400 : 300,
                             },
                           },
                         ],
@@ -177,14 +175,12 @@ export const Hero = () => {
                         fromTo: [
                           {
                             attr: {
-                              width: toVw(143, 1920),
+                              width: 143,
                             },
                           },
                           {
                             attr: {
-                              width: isMobileSize
-                                ? toVw(400, 800)
-                                : toVw(300, 1920),
+                              width: isMobileSize ? 400 : 300,
                             },
                           },
                         ],
@@ -206,14 +202,12 @@ export const Hero = () => {
                           fromTo: [
                             {
                               attr: {
-                                width: toVw(143, 1920),
+                                width: 143,
                               },
                             },
                             {
                               attr: {
-                                width: isMobileSize
-                                  ? toVw(400, 800)
-                                  : toVw(300, 1920),
+                                width: isMobileSize ? 400 : 300,
                               },
                             },
                           ],
@@ -223,7 +217,7 @@ export const Hero = () => {
                           end: 100,
                           to: {
                             attr: {
-                              width: toVw(1440, 1920),
+                              width: 1440,
                             },
                           },
                         },
