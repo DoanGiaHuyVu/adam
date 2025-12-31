@@ -10,6 +10,7 @@ const nextConfig = {
     unoptimized: true,
     domains: ["lab.basement.studio"],
   },
+  basePath: "/adam",
 };
 
 module.exports = (_phase, { defaultConfig: _ }) => {
