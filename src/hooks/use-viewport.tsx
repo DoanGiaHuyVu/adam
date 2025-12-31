@@ -8,14 +8,9 @@ export const useViewportSize = (
   { callTreshhold } = { callTreshhold: CALL_THRESHOLD_MS }
 ) => {
   const resizeTimeout = useRef<NodeJS.Timeout | null>(null)
-  const [windowSize, setWindowSize] = useState<{
-    width: number
-    height: number
-    aspect: number
-  }>({
-    width: isClient ? window.innerWidth : 0,
-    height: isClient ? window.innerHeight : 0,
-    aspect: isClient ? window.innerWidth / window.innerHeight : 0
+    width: 0,
+    height: 0,
+    aspect: 0
   })
 
   useEffect(() => {
