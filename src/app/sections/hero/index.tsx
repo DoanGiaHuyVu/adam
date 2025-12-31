@@ -155,8 +155,8 @@ export const Hero = () => {
                           {
                             attr: {
                               width: isMobileSize
-                                ? toVw(400, 800, 400)
-                                : toVw(300, 1920, 490),
+                                ? toVw(400, 800)
+                                : toVw(300, 1920),
                             },
                           },
                         ],
@@ -183,8 +183,8 @@ export const Hero = () => {
                           {
                             attr: {
                               width: isMobileSize
-                                ? toVw(400, 800, 400)
-                                : toVw(300, 1920, 490),
+                                ? toVw(400, 800)
+                                : toVw(300, 1920),
                             },
                           },
                         ],
@@ -212,8 +212,8 @@ export const Hero = () => {
                             {
                               attr: {
                                 width: isMobileSize
-                                  ? toVw(400, 800, 400)
-                                  : toVw(300, 1920, 490),
+                                  ? toVw(400, 800)
+                                  : toVw(300, 1920),
                               },
                             },
                           ],

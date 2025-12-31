@@ -9,6 +9,7 @@ import { useMapToCylinder } from "./helpers";
 import { Experiment } from "../../../lib/types";
 import Link from "next/link";
 import { useViewportSize } from "~/hooks/use-viewport";
+import { BASE_PATH } from "~/lib/constants";
 
 const progress = { value: 0 };
 
@@ -88,7 +89,7 @@ export const Cyllinder: React.FC<CyllinderProps> = ({ experiments }) => {
                         <Image
                           draggable={false}
                           className={clsx("image", s["image"])}
-                          src={experiment.og}
+                          src={`${BASE_PATH}${experiment.og}`}
                           width={760}
                           height={496}
                           quality={100}

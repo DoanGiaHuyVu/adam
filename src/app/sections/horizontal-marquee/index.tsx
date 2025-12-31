@@ -2,6 +2,7 @@
 
 import * as Scrollytelling from "~/lib/scrollytelling-client";
 import s from "./horizontal-marquee.module.scss";
+import { BASE_PATH } from "~/lib/constants";
 
 // const phrase = "OUR WOR IS SERIOUS WE ARE NOT";
 const phrase = "WITH ALL MY MIGHT...";
@@ -97,7 +98,7 @@ export const HorizontalMarquee = () => {
               >
                 <img
                   className={s.worldSvg}
-                  src="/images/image-removebg-preview.png"
+                  src={`${BASE_PATH}/images/image-removebg-preview.png`}
                   alt="World"
                   loading="lazy"
                 />
