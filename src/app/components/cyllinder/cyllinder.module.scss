@@ -3,12 +3,14 @@
 .section {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 
   .pin {
     display: flex;
     align-items: center;
     position: sticky;
-    height: 100vh;
+    height: 100dvh;
     top: 0;
     width: 100%;
   }
