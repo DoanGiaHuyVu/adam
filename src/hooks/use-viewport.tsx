@@ -4,8 +4,13 @@ import { isClient } from '../lib/utils'
 
 const CALL_THRESHOLD_MS = 0
 
+type UseViewportSizeProps = {
+  callTreshhold?: number
+  ignoreVerticalResize?: boolean
+}
+
 export const useViewportSize = (
-  { callTreshhold } = { callTreshhold: CALL_THRESHOLD_MS }
+  { callTreshhold = CALL_THRESHOLD_MS, ignoreVerticalResize = false }: UseViewportSizeProps = {}
 ) => {
   const resizeTimeout = useRef<NodeJS.Timeout | null>(null)
   const [windowSize, setWindowSize] = useState<{
@@ -24,17 +29,32 @@ export const useViewportSize = (
         clearTimeout(resizeTimeout.current)
       }
       resizeTimeout.current = setTimeout(() => {
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-          aspect: window.innerWidth / window.innerHeight
+        setWindowSize((prev) => {
+          const newWidth = window.innerWidth
+          const newHeight = window.innerHeight
+
+          // If we want to prevent updates when only height changes (mobile address bar)
+          if (ignoreVerticalResize && newWidth === prev.width && newHeight !== prev.height) {
+            return prev
+          }
+          
+          return {
+            width: newWidth,
+            height: newHeight,
+            aspect: newWidth / newHeight
+          }
         })
       }, callTreshhold)
     }
 
     window.addEventListener('resize', handleResize, { passive: true })
 
-    handleResize()
+    // Initial set
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+      aspect: window.innerWidth / window.innerHeight
+    })
 
     return () => {
       window.removeEventListener('resize', handleResize)
@@ -43,7 +63,7 @@ export const useViewportSize = (
         clearTimeout(resizeTimeout.current)
       }
     }
-  }, [])
+  }, [callTreshhold])
 
   return windowSize
 }
