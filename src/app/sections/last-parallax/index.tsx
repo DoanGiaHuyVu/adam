@@ -28,7 +28,10 @@ export const LastParallax = () => {
             at={50}
             tween={{
               target: ["body"],
-              to: { background: "white", color: "black" },
+              fromTo: [
+                { background: "black", color: "white" },
+                { background: "white", color: "black" },
+              ],
               duration: 0.35,
             }}
           />

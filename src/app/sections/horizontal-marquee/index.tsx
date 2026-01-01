@@ -22,7 +22,10 @@ export const HorizontalMarquee = () => {
             at={85}
             tween={{
               target: ["#horizontal-marquee-section", "body", "#horizontal-marquee-text"],
-              to: { background: "black", color: "white" },
+              fromTo: [
+                { background: "white", color: "black" },
+                { background: "black", color: "white" },
+              ],
               duration: 0.35,
             }}
           />

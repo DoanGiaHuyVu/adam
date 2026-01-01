@@ -132,7 +132,10 @@ const PreFooter = () => {
         at={75}
         tween={{
           target: ["body"],
-          to: { background: "black", color: "white" },
+          fromTo: [
+            { background: "white", color: "black" },
+            { background: "black", color: "white" },
+          ],
           duration: 0.35,
         }}
       />
