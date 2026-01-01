@@ -22,7 +22,7 @@ const itemsInViewAtOnce = 7;
 const itemsPadding = 4;
 
 export const Cyllinder: React.FC<CyllinderProps> = ({ experiments }) => {
-  const { height } = useViewportSize({ ignoreVerticalResize: true });
+  const { height } = useViewportSize();
   const pinSpacerHeight = `calc(3 * ${itemHeight} * ${
     Math.max(itemsInViewAtOnce, experiments.length) + itemsPadding
   })`;
