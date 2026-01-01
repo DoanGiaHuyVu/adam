@@ -120,7 +120,7 @@
 
   @media screen and (max-width: 800px) {
     [class*="sticker-"] {
-      width: tovw(100px); // Smaller on mobile
+      width: tovw(450px); // Larger on mobile
     }
   }
 }
