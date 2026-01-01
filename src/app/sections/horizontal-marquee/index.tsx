@@ -21,10 +21,21 @@ export const HorizontalMarquee = () => {
           <Scrollytelling.Waypoint
             at={85}
             tween={{
-              target: ["#horizontal-marquee-section", "body", "#horizontal-marquee-text"],
+              target: ["#horizontal-marquee-section", "body"],
               fromTo: [
                 { background: "white", color: "black" },
                 { background: "black", color: "white" },
+              ],
+              duration: 0.35,
+            }}
+          />
+          <Scrollytelling.Waypoint
+            at={85}
+            tween={{
+              target: ["#horizontal-marquee-text"],
+              fromTo: [
+                { color: "#FBBC05" },
+                { color: "white" },
               ],
               duration: 0.35,
             }}
