@@ -52,9 +52,9 @@
   filter: brightness(0.6);
 
   @media screen and (max-width: 800px) {
-    width: tovw(532px, "mobile");
+    width: tovw(200px, "mobile");
     height: auto;
-    left: 0;
+    left: tovw(150px, "mobile");
     top: tovw(52px, "mobile");
   }
 }
