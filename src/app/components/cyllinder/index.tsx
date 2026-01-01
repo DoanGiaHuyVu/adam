@@ -59,14 +59,6 @@ export const Cyllinder: React.FC<CyllinderProps> = ({ experiments }) => {
         }}
       >
         <div className={s["pin"]}>
-          <Scrollytelling.Waypoint
-            at={0}
-            tween={{
-              target: ["body"],
-              to: { background: "black", color: "white" },
-              duration: 0.35,
-            }}
-          />
           <div className={s["cyllinder"]}>
             <Scrollytelling.Animation
               tween={{
