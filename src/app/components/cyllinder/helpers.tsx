@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { useCallback, useMemo } from "react";
+import { useCallback, useMemo, useState, useEffect } from "react";
 import { isClient } from "../../../lib/utils";
 
 export const defaultConfig = {
@@ -33,11 +33,12 @@ type Config = {
 export const useMapToCylinder = (config: Omit<Config, "config"> & {
   config?: Partial<Config["config"]>;
 }) => {
-  const targets = useMemo(() => {
-    if(!isClient) return
+  const [targets, setTargets] = useState<Element[]>([]);
 
-    const a = Array.from(document.querySelectorAll(config.target));
-    return a;
+  useEffect(() => {
+    if (!isClient) return;
+
+    setTargets(Array.from(document.querySelectorAll(config.target)));
   }, [config.target]);
 
   const resolvedConfig = useMemo<Config>(() => {
